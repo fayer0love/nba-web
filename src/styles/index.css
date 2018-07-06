@@ -4,5 +4,6 @@ body {
   font-family: sans-serif;
 }
 
-@import './App.css';
-@import './TopNavBar.css';
+@import 'App.css';
+@import 'TopNavBar.css';
+@import 'Main.css';
