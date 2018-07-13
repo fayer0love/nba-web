@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import { PROFILE_PIC_URL_PREFIX, TEAM_LOGO_URL_PREFIX } from '../constants'
 
 export default class Profile extends Component {
   render() {
     console.log(this.props);
 
     const {
+      playerId,
       playerName,
       teamCity,
       teamName,
+      teamAbbreviation,
       height,
       weight,
       pts,
@@ -19,10 +22,18 @@ export default class Profile extends Component {
     return (
       <div className="profile">
         <div className="player-name"> {playerName} </div>
+        <img className="profile-pic"
+          src={`${PROFILE_PIC_URL_PREFIX}/${playerId}.png`}
+          alt="profile"
+        />
         <div className="profile-entry">
           <div className="profile-entry-left">Team</div>
           <div className="profile-entry-right">{`${teamCity} ${teamName}`}</div>
         </div>
+        <img className="team-logo"
+             src={`${TEAM_LOGO_URL_PREFIX}/${teamAbbreviation}_logo.svg`}
+             alt="team logo"
+        />
         <div className="profile-entry">
           <div className="profile-entry-left">Height</div>
           <div className="profile-entry-right">{height}</div>
