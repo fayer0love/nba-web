@@ -15,7 +15,7 @@ export class ShotChart extends React.Component {
     displayTooltip: PropTypes.bool,
   }
 
-  componentDidUpdate() { // execute when items changed
+  componentDidUpdate() {
     nba.stats.shots({
       PlayerID: this.props.playerId
     }).then((response) => {
@@ -44,4 +44,3 @@ export class ShotChart extends React.Component {
     );
   }
 }
-

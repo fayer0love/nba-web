@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { PROFILE_PIC_URL_PREFIX, TEAM_LOGO_URL_PREFIX } from '../constants'
 
-export default class Profile extends Component {
+export class Profile extends Component {
   render() {
     console.log(this.props);
 
